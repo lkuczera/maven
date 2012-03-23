@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="net.liftweb" module="lift-modules_2.9.1" revision="2.5-SNAPSHOT" status="release" publication="20120323010444"/>
+	<configurations>
+		<conf name="default" visibility="public" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="lift-modules_2.9.1" type="pom" ext="pom" conf="default"/>
+	</publications>
+</ivy-module>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="net.liftweb" module="lift-jta_2.9.1" revision="2.5.1" status="release" publication="20120323090255"/>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description=""/>
+		
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="system" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="javadoc" visibility="public" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="lift-jta_2.9.1" type="jar" ext="jar" conf="compile,runtime,provided,system,optional,sources,javadoc"/>
+		<artifact name="lift-jta_2.9.1" type="pom" ext="pom" conf="compile,runtime,provided,system,optional,sources,javadoc"/>
+		<artifact name="lift-jta_2.9.1" type="jar" ext="jar" conf="compile,runtime,provided,system,optional,sources,javadoc" e:classifier="sources"/>
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="3.4.0.GA" conf="provided->default(compile)"/>
+		
+		<dependency org="org.scala-libs" name="scalajpa_2.9.1" rev="1.4" conf="compile->default(compile)"/>
+		<dependency org="javax.persistence" name="persistence-api" rev="1.0" conf="provided->default(compile)"/>
+		<dependency org="javax.transaction" name="transaction-api" rev="1.1" conf="provided->default(compile)"/>
+		<dependency org="com.atomikos" name="transactions-api" rev="3.2.3" conf="provided->default(compile)"/>
+		<dependency org="com.atomikos" name="atomikos-util" rev="3.2.3" conf="provided->default(compile)"/>
+		<dependency org="net.liftweb" name="lift-util_2.9.1" rev="2.5.1" conf="compile->default(compile)"/>
+		<dependency org="com.atomikos" name="transactions-jta" rev="3.2.3" conf="provided->default(compile)"/>
+		<dependency org="com.atomikos" name="transactions" rev="3.2.3" conf="provided->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.9.1" conf="compile->default(compile)">
+			
+		</dependency>
+	</dependencies>
+</ivy-module>
