@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="com.github.levkhomich" module="akka-tracing-spray_2.10" revision="0.4-EL" status="release" publication="20140624144113">
+		<license name="Apache Public License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+		<description homepage="https://github.com/levkhomich/akka-tracing">
+		Akka Tracing: Spray
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="public" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		
+	</configurations>
+	<publications>
+		<artifact name="akka-tracing-spray_2.10" type="pom" ext="pom" conf="pom"/>
+		<artifact name="akka-tracing-spray_2.10" type="jar" ext="jar" conf="compile"/>
+		<artifact name="akka-tracing-spray_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="akka-tracing-spray_2.10" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.4" conf="compile->default(compile)"/>
+		<dependency org="com.github.levkhomich" name="akka-tracing-core_2.10" rev="0.4-EL" conf="compile->default(compile)"/>
+		<dependency org="io.spray" name="spray-routing" rev="1.1.1" conf="compile->default(compile)"/>
+		<dependency org="org.specs2" name="specs2_2.10" rev="2.3.11" conf="test->default(compile)"/>
+		<dependency org="com.twitter" name="finagle-core_2.10" rev="6.15.0" conf="test->default(compile)"/>
+		<dependency org="io.spray" name="spray-can" rev="1.1.1" conf="test->default(compile)"/>
+	</dependencies>
+</ivy-module>
